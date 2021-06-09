@@ -7,6 +7,8 @@ var inputDate = d3.select("#datetime");
 var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes","comment"]
 
 function addData(dataInput) {
+    tbody.html("");
+
     dataInput.forEach(sighting => {
         var row = tbody.append("tr");
         columns.forEach(column => row.append("td").text(sighting[column])
@@ -22,8 +24,7 @@ button.on("click", () => {
     var inputValue = inputDate.property("value");
     var filterDate = tableData.filter(d => d.datetime === inputValue);
     
-    tbody.html("");
-
+    
     var userInput = {
         filterDate
     }
