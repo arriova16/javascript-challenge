@@ -8,10 +8,12 @@ var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes
 
 
 function buildTable(data) {
-    data.forEach(sighting => {
-        
-    })
-}
+        data.forEach(sighting => {
+        var row = tbody.append("tr");
+        columns.forEach(column => row.append("tr").text(sighting[column])
+        );
+    });
+};
 
 
 
