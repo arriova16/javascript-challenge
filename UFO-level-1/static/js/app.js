@@ -16,7 +16,7 @@ function buildTable(data) {
 };
 
 
-
+addData(tableData);
 
 button.on("click", () => {
     d3.event.preventDefault();
@@ -37,6 +37,9 @@ button.on("click", () => {
     
     tbody.html("");
 
+    if(! == 0) {
+
+    }
 
 
 });
