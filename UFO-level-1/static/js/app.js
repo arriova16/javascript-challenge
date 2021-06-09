@@ -5,9 +5,9 @@ var tbody = d3.select("tbody");
 var button = d3.select("#filter-btn");
 var inputDate = d3.select("#datetime");
 var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes","comment"]
-
+tbody.html("");
 function addData(dataInput) {
-    tbody.html("");
+    
 
     dataInput.forEach(sighting => {
         var row = tbody.append("tr");
