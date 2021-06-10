@@ -6,7 +6,7 @@ var button = d3.select("#filter-btn");
 var inputDate = d3.select("#datetime");
 var columns = ["datetime", "city", "state", "country", "shape", "durationMinutes","comment"]
 
-function addData(dataInput) {
+var addData = (dataInput) => {
     
     dataInput.forEach(sighting => {
         var row = tbody.append("tr");
@@ -25,11 +25,11 @@ button.on("click", () => {
     
     tbody.html("");
 
-    var userInput = {
+    var response = {
         filterDate
     }
     
-    if (userInput.filterDate.length !== 0) {
+    if (response.filterDate.length !== 0) {
         addData(filterDate);
     }
 
